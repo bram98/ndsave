@@ -13,7 +13,7 @@ ndsave.savetxt(fname, X, fmt='%.18e',
 #### parameters
 - `fname` File name. Where to save the file. `.txt` is added automatically.
 - `X` Multidimensional array
-- `axisdata` List of arrays. The i-th entry corresponds to the i-th axis in `X`. One should have `len( axisdata[i] == X.shape[i] )`. For each axisdata entry that is missing, a `np.arange` with corresponding length is used.
+- `axisdata` List of arrays. The i-th entry corresponds to the i-th axis in `X`. One should have `len( axisdata[i] ) == X.shape[i] `. For each axisdata entry that is missing, a `np.arange` with corresponding length is used.
 - `axisnames` List of axis names (strings). For each axisname that is missing, the corresponding axis is used as a string
 - `header` The header is used like in `np.savetxt`, but since the shape, axisnames and axisdata are saved like a header, the header is not at the top of the document.
 
